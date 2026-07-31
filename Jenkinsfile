@@ -11,7 +11,7 @@ pipeline {
 
   /* For Linux Agent
   stages {
-  
+
     stage('Checkout') {
       steps {
         git branch: 'main', 
@@ -44,7 +44,7 @@ pipeline {
     stage('Checkout') {
       steps {
         git branch: 'main',
-            url: 'https://github.com/org/playwright-tests.git',
+            url: 'https://github.com/firmansyahwp/testingpwmcp.git',
             credentialsId: 'github-testingpwmcp'
       }
     }
