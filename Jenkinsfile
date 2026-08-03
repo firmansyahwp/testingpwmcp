@@ -6,7 +6,8 @@ pipeline {
   }
 
   triggers {
-    githubPush()   // aktif kalau job dikonfigurasi lewat GitHub webhook
+    pollSCM('H/5 * * * *')  // aktif kalau job dikonfigurasi lewat polling SCM
+    //githubPush()   // aktif kalau job dikonfigurasi lewat GitHub webhook
   }
 
   /* For Linux Agent
