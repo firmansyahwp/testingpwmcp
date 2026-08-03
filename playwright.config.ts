@@ -30,7 +30,7 @@ export default defineConfig({
   reporter: process.env.CI
     ? [
         ['list'],
-        ['junit', { outputFile: 'results/junit.xml' }],
+        ['junit', { outputFile: process.env.PLAYWRIGHT_JUNIT_OUTPUT_NAME || 'results/junit.xml' }], // JUnit report for Jenkins with default name results/junit.xml if PLAYWRIGHT_JUNIT_OUTPUT_NAME is not set
         ['html', { outputFolder: 'playwright-report', open: 'never' }],
       ]
     : 'html',
