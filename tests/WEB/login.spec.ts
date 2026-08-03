@@ -21,6 +21,8 @@ const configData = ExcelReader.readSheet(
     );
 
 
+try {
+
 for (let i = 0; i < configData.length; i++) {
         const config = configData[i];
 
@@ -119,7 +121,14 @@ for (let i = 0; i < configData.length; i++) {
         //update Passed File
         ConfigReader.createPassedFile(ConfigReader.get('passed_path'), config.TC_ID+"_"+config.TC_Name)
 
-    }
+    }    
+
+    
+} catch (error) {
+
+    throw error;
+
+}
 
 })
 
