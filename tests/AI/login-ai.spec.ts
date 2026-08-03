@@ -89,6 +89,7 @@ for (const row of configData) {
                 /* Log the error and rethrow it to fail the test case */
                 console.error(`Test case failed for ${testdata.TC_ID}:`, error);
                 //throw error;
+                throw error
 
             } finally {
 

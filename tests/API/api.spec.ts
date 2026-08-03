@@ -183,7 +183,10 @@ async ({ request }) => {
             error.message,
             'FAIL',
             row.URL
-        );
+            );
+
+            throw error;
+
         }
     }
 
