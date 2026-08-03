@@ -66,6 +66,13 @@ pipeline {
       }
     }
 
+    stage('Debug - cek hasil test') {
+      steps {
+        bat 'dir /s /b results'
+        bat 'if exist test-results (dir /s /b test-results) else (echo "no test-results folder")'
+      }
+    }
+
   }  
 
   post {
